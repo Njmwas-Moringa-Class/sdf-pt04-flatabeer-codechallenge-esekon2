@@ -71,9 +71,9 @@
     },
     {
       "id": 8,
-      "name": "Misspent Youth",
-      "description": "The brainchild of our small batch brewer, George Woods. A dangerously drinkable milk sugar- infused Scotch Ale.",
-      "image_url": "https://images.punkapi.com/v2/keg.png",
+      "name": "HBC 369",
+      "description": "HBC 369 brings rich fruity flavours with the tiniest layer of candy coating on top. HBC 369 (the hop) can bring notes of blueberries, pear, and possibly even sweet potato. HBC 369 (the beer) was balanced, with just one hop providing a complex aroma, and a dry bitterness.",
+      "image_url": "https://images.punkapi.com/v2/28.png",
       "reviews": [
         "Woe is me, how I long for the days of yore",
         "Reminds me of that time I wasted all of my time",
@@ -97,6 +97,26 @@
       "reviews": [
         "Like autumn leaves readying themselves for the winter sun",
         "Beep beep, you're having a beer"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Keg Only",
+      "description": "Invented by and brewed by Dan Bloxham, no matter what anyone else says. A medium bodied, bitter, US style stout, with a wasabi warmth, a subtle earthiness and a hint of soy sauce.",
+      "image_url": "https://images.punkapi.com/v2/keg.png",
+      "reviews": [
+        "Wadau muite machampez tulit up this drink inashika mbaya.",
+        "Pale Base hii drink ushika!!"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Evil Twin",
+      "description": "Brewed in collaboration with Jeppe from Evil Twin Brewing (and named after his mum), this Double IPA is big on fruity flavours. Single hopped with Mosaic for lots of tropical, passion fruit and citrus flavours. Loaded with well over 100kg of blueberries, the original was one super fruity hop bomb.",
+      "image_url": "https://images.punkapi.com/v2/190.png",
+      "reviews": [
+        "14% Orange Blossom Honey-wine with Wild Blueberries and Cashew",
+        "A true rarity—savor and share it only with those you hold dear, as it will never be made again."
       ]
     }
   ]
