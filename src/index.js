@@ -62,7 +62,23 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 };
 
+    // We proceed to handle the review form.
+    const reviewForm = document.getElementById("review-form");
+    reviewForm.addEventListener("submit", (event) => {
+        event.preventDefault(); // We prevent the default form submission.
 
+        // We retrieve the new review text from the input field.
+        const newReview = document.getElementById("review").value;
+        const reviewList = document.getElementById("review-list");
 
+        // We display the new review in the list and clear the input field.
+        const li = document.createElement("li");
+        li.textContent = newReview;
+        reviewList.appendChild(li);
+        document.getElementById("review").value = ""; // We clear the review input field.
+    });
+
+    // As part of the initial setup, we fetch and display the beer menu when the page loads.
+    fetchAndDisplayBeerMenu();
 
 });
