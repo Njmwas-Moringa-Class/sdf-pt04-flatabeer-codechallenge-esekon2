@@ -1,11 +1,10 @@
-// When the page is fully loaded, we begin here.
 document.addEventListener("DOMContentLoaded", () => {
 
     // First, we define the base URL for the API.
     const baseUrl = "http://localhost:3000";
     console.log("API base URL:", baseUrl);
     
-    // Next, we create a function to fetch and display beer details.
+    // Function to fetch and display beer details.
     const fetchAndDisplayBeer = (beerId) => {
         // Inside this function, we start by fetching beer data from the API.
         fetch(`${baseUrl}/beers/${beerId}`)
@@ -32,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
     };
     
-    // Moving on, we create a function to fetch and display the beer menu.
+    // Function to fetch and display the beer menu.
     const fetchAndDisplayBeerMenu = () => {
         // Within this function, we initiate a fetch to obtain the list of available beers from the API.
         fetch(`${baseUrl}/beers`)
@@ -47,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 beers.forEach((beer) => {
                     const li = document.createElement("li");
                     li.textContent = beer.name;
+                    li.dataset.beerId = beer.id; // Add a data attribute for the beer's ID.
     
                     // We add an event listener to each menu item to display beer details when clicked.
                     li.addEventListener("click", () => {
@@ -63,6 +63,22 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
     };
+    
+    // Add a click event listener to the review list.
+    document.getElementById("review-list").addEventListener("click", (event) => {
+        if (event.target.tagName === "LI") {
+            event.target.remove(); // Remove the clicked review item.
+        }
+    });
+
+    // Add a click event listener to the beer list in the navigation.
+    document.getElementById("beer-list").addEventListener("click", (event) => {
+        if (event.target.tagName === "LI") {
+            // Get the beer ID from the clicked item.
+            const beerId = event.target.dataset.beerId;
+            fetchAndDisplayBeer(beerId);
+        }
+    });
     
     // We proceed to handle the review form.
     const reviewForm = document.getElementById("review-form");
@@ -82,6 +98,4 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // As part of the initial setup, we fetch and display the beer menu when the page loads.
     fetchAndDisplayBeerMenu();
-    
-    });
-    
+});
